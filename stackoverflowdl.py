@@ -2,14 +2,14 @@ import email, getpass, imaplib, os
 
 detach_dir = '.' # directory where to save attachments (default: current)
 user = 'ucdprint'
-pwd = getpass.getpass("")
+pwd = 'itlm027test'
 
 # connecting to the gmail imap server
 m = imaplib.IMAP4_SSL("imap.gmail.com")
 m.login(user,pwd)
-m.select("[Gmail]/INBOX") # here you a can choose a mail box like INBOX instead
+m.select("Print") # here you a can choose a mail box like INBOX instead
 # use m.list() to get all the mailboxes
-print m.list()
+# print m.list()
 
 resp, items = m.search(None, "ALL") # you could filter using the IMAP rules here (check http://www.example-code.com/csharp/imap-search-critera.asp)
 items = items[0].split() # getting the mails id
