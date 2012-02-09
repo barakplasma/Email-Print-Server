@@ -1,3 +1,7 @@
+#http://stackoverflow.com/questions/348630/how-can-i-download-all-emails-with-attachments-from-gmail
+#TODO append from to each file via foldering or filename
+#TODO send to CUPS to print
+
 import email, getpass, imaplib, os
 
 detach_dir = '.' # directory where to save attachments (default: current)
